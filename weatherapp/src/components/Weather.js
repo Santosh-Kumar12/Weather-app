@@ -13,7 +13,8 @@ const Weather = () => {
 
 
     const getWeatherInfo = () => {
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=b62754d4a53e191e641099808b7e547c`
+      // const apikey = process.env.API_KEY
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
 
         fetch(url).then((data) => {
             // console.log(data);
